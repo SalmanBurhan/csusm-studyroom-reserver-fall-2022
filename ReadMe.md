@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2022">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://www.csusm.edu/communications/images/branding-images/csusmlogo_fullnamehillsabove_blue.jpg" alt="Logo" width="300">
   </a>
 
 <h3 align="center">Fall 2023<br/>CSUSM Study Room Reserver</h3>
