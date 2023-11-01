@@ -26,7 +26,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -34,7 +33,9 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">CSUSM Study Room Reserver</h3>
+<h3 align="center">Fall 2023<br/>CSUSM Study Room Reserver</h3>
+
+![stability-shield]
 
   <p align="center">
     project_description
@@ -80,6 +81,15 @@
 
 
 
+## Obsoletion
+This project's lifespan extended through the 2022-2023 academic year at California State University San Marcos.
+
+However in the summer prior to Fall 2023, CSUSM migrated their studyroom reservation management to [LibCal](https://springshare.com/libcal/), a product of [SpringShare's LibApps](https://springshare.com/index.html) suite of SaaS.
+
+This migration ultimately rendered this iteration of the project obsolete along with exploitable vulnerabilities discovered in the original management system.
+
+Moving forward, the next iteration of this project may be found here:
+> [SalmanBurhan/csusm-studyroom-reserver-fall-2023](https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2023)
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -269,6 +279,9 @@ Project Link: [https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-202
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[stability-shield]: https://img.shields.io/badge/stability-obsolete-red?style=for-the-badge
+
 [contributors-shield]: https://img.shields.io/github/contributors/SalmanBurhan/csusm-studyroom-reserver-fall-2022.svg?style=for-the-badge
 [contributors-url]: https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2022/graphs/contributors
 
