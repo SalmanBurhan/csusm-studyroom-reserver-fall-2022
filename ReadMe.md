@@ -135,9 +135,10 @@ pip install -r requirements.txt
 ```
 
 #### Google Chrome
-It is recommended to make a copy of your `Google Chrome`` executable and keep it within the project as it reduces the frequency of Chrome auto-updating and breaking compatibility with the version of `chromedriver` installed.
+It is recommended to make a copy of your `Google Chrome` executable and keep it within the project as it reduces the frequency of Chrome auto-updating and breaking compatibility with the version of `chromedriver` installed.
 
-For MacOS this executable can be found at:`/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome`
+For MacOS this executable can be found at:
+> `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome`
 
 #### Chrome Driver
 Download a copy of [chromedriver](https://chromedriver.chromium.org) that matches your OS environment and Google Chrome installation.
