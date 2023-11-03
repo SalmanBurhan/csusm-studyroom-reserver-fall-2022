@@ -30,15 +30,15 @@
 <br />
 <div align="center">
   <a href="https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2022">
-    <img src="https://www.csusm.edu/communications/images/branding-images/csusmlogo_fullnamehillsabove_blue.jpg" alt="Logo" width="300">
+    <img src="img/kellog-library-rounded.png" alt="Logo" width="180">
   </a>
 
-<h3 align="center">Fall 2023<br/>CSUSM Study Room Reserver</h3>
+<h3 align="center">Fall 2023<br/>Study Room Reserver</h3>
 
 ![stability-shield]
 
   <p align="center">
-    project_description
+    Automating the booking process for group study rooms.
     <br />
     <a href="https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2022"><strong>Explore the docs »</strong></a>
     <br />
@@ -95,6 +95,9 @@ Moving forward, the next iteration of this project may be found here:
 
 [![ProjectScreenShot][project-screenshot]](https://example.com)
 
+> TODO
+
+### Vulnerabilites Discovered
 > TODO
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
