@@ -33,7 +33,7 @@
     <img src="img/kellog-library-rounded.png" alt="Logo" width="180">
   </a>
 
-<h3 align="center">Fall 2023<br/>Study Room Reserver</h3>
+<h3 align="center">Fall 2022<br/>Study Room Reserver</h3>
 
 ![stability-shield]
 
@@ -84,7 +84,7 @@
 ## Obsoletion
 This project's lifespan extended through the 2022-2023 academic year at California State University San Marcos.
 
-However in the summer prior to Fall 2022, CSUSM migrated their studyroom reservation management to [LibCal](https://springshare.com/libcal/), a product of [SpringShare's LibApps](https://springshare.com/index.html) suite of SaaS.
+However in the summer prior to Fall 2023, CSUSM migrated their studyroom reservation management to [LibCal](https://springshare.com/libcal/), a product of [SpringShare's LibApps](https://springshare.com/index.html) suite of SaaS.
 
 This migration ultimately rendered this iteration of the project obsolete along with exploitable vulnerabilities discovered in the original management system.
 
