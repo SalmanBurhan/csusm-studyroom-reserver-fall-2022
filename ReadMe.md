@@ -92,6 +92,17 @@ Moving forward, the next iteration of this project may be found here:
 > [SalmanBurhan/csusm-studyroom-reserver-fall-2023](https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2023)
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This is a Selenium-based Python program to automate the booking of campus library study rooms, thus enhancing the efficiency of booking campus study rooms.
+
+The project features:
+*	**Scheduled Automation**: Implemented a scheduled frequency for room booking, ensuring availability at specific times.
+*	**Preference Logic**: Prioritized preferred study rooms, amenities, and floors; seamlessly fell back to alternate choices if the first preference was unavailable.
+*	**Multi-Factor Authentication (MFA) Integration**: Incorporated HOTP code generation, eliminating the need for manual authentication via push notifications.
+*	**Dynamic Booking Times**: Modified booking times in 30-minute increments to find the optimal match for given parameters, maximizing the chances of securing desired study slots.
+
+This project began as a personal project, however has since been aimed to showcase a blend of technical skills in web automation, security awareness, and problem-solving, resulting in a streamlined and intelligent solution for efficient campus study room booking.
+
+### Basic Log Output
 ``` log
 2022-10-13 10:43:01 PM :: Kellog Library :: INFO :: Searching For Rooms From 2022-10-14 13:30:00 To 2022-10-14 16:30:00 On Floor 4
 2022-10-13 10:43:07 PM :: Kellog Library :: INFO :: Parsing Web Page
@@ -113,10 +124,17 @@ Moving forward, the next iteration of this project may be found here:
 2022-10-13 10:43:19 PM :: Kellog Library :: INFO :: Parsing and Validating Server Response
 2022-10-13 10:43:19 PM :: Kellog Library :: INFO :: Room 4001 Successfully Reserved
 ```
-> TODO
 
-### Vulnerabilites Discovered
-> TODO
+### Vulnerability Disclosure
+#### Description
+During the development of this project, a vulnerability was discovered in the reservation system's JavaScript code. The system enforces a 24-hour window limitation for booking study rooms, but this limitation is solely implemented on the client side and not validated server-side.
+
+#### Vulnerability Details
+By manually generating query parameters, it is possible to bypass the client-side restrictions and schedule study rooms past the stated 24-hour time window. This poses a potential risk and undermines the intended functionality of the reservation system.
+
+#### Vulnerability Patch
+As the reservation system has since been migrated to [LibCal](https://springshare.com/libcal/), this vulnverability is no longer present,
+and may be deemed patched.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
