@@ -165,11 +165,11 @@ To get a local copy up and running follow these simple steps.
 
 #### Library Dependencies
 This is an example of how to list things you need to use the software and how to install them.
-```sh
+``` bash
 pip install -r requirements.txt
 ```
 or if you prefer to virtualize your environment (*preferred method*)
-```sh
+``` bash
 python3 -m venv ./env
 source ./env/bin/activate
 pip install -r requirements.txt
@@ -188,26 +188,26 @@ Download a copy of [chromedriver](https://chromedriver.chromium.org) that matche
 ### Installation
 
 1. Clone the repo
-   ```sh
+   ``` bash
    git clone https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2022.git
    cd csusm-studyroom-reserver-fall-2022
    ```
 2. Setup Virtual Environment
-   ```sh
+   ``` bash
    python3 -m venv ./env
    source ./env/bin/activate
    ```
 3. Install Dependencies
-   ```sh
+   ``` bash
    pip install -r requirements.txt
    ```
 4. Enter your CSUSM Credentials in `constants.py`
-   ```python
+   ``` python
    CSUSM_EMAIL = 'lname001@csusm.edu'
    CSUSM_PASSWORD = None
    ```
 5. Specify the paths to your DUO secret and Chrome/chromedriver installation
-   ```python
+   ``` python
    DUO_SECRET_PATH = "duo/base32_secret.hotp"
 
    CHROMEDRIVER_PATH = 'browser/chromedriver'
@@ -250,7 +250,7 @@ ATTENDEES_COUNT = 2
 
 ### Run
 
-```python
+``` bash
 python3 main.py
 ```
 
@@ -260,8 +260,7 @@ A `cron` job or `launchd` service should be created to run the script the day be
 
 Assuming the default `TARGET_TIMES` values, the `launchd` plist file should look like the following template:
 
-> `~/Library/LaunchAgents/com.user.csusm-studyroom-reserver.plist`
-``` plist
+``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -315,9 +314,9 @@ Assuming the default `TARGET_TIMES` values, the `launchd` plist file should look
 </plist>
 ```
 
-Upon saving the file, load the scheduled job using
+Upon saving the file to the customary path `~/Library/LaunchAgents/`, load the scheduled job using:
 
-``` shell
+``` bash
 launchctl load ~/Library/LaunchAgents/com.user.csusm-studyroom-reserver.plist
 ```
 
