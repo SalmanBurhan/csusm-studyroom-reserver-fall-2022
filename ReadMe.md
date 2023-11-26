@@ -92,9 +92,27 @@ Moving forward, the next iteration of this project may be found here:
 > [SalmanBurhan/csusm-studyroom-reserver-fall-2023](https://github.com/SalmanBurhan/csusm-studyroom-reserver-fall-2023)
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![ProjectScreenShot][project-screenshot]](https://example.com)
-
+``` log
+2022-10-13 10:43:01 PM :: Kellog Library :: INFO :: Searching For Rooms From 2022-10-14 13:30:00 To 2022-10-14 16:30:00 On Floor 4
+2022-10-13 10:43:07 PM :: Kellog Library :: INFO :: Parsing Web Page
+2022-10-13 10:43:07 PM :: Kellog Library :: INFO :: Validating and Mapping Search Results
+2022-10-13 10:43:07 PM :: Kellog Library :: INFO :: Search Returned 4 Results
+2022-10-13 10:43:07 PM :: Auth Flow :: INFO :: Beginning Auth Flow
+2022-10-13 10:43:07 PM :: Browser :: INFO :: Initializing ChromeDriver Service
+2022-10-13 10:43:07 PM :: Browser :: INFO :: Initializing Chrome Instance with Options: ['--disable-gpu', '--headless', '--window-size=800,600']
+2022-10-13 10:43:10 PM :: Auth Flow :: INFO :: Beginning CSUSM Portion of Auth Flow
+2022-10-13 10:43:13 PM :: Auth Flow :: INFO :: Beginning DUO 2FA Portion of Auth Flow
+2022-10-13 10:43:14 PM :: Auth Flow :: INFO :: Generating 2FA Code
+2022-10-13 10:43:14 PM :: Auth Flow :: INFO :: 2FA Code ==> ******
+2022-10-13 10:43:14 PM :: Auth Flow :: INFO :: Awaiting Redirect To CSUSM
+2022-10-13 10:43:18 PM :: Auth Flow :: INFO :: Is Logged In ==> True
+2022-10-13 10:43:18 PM :: Auth Flow :: INFO :: Auth Flow Successful
+2022-10-13 10:43:18 PM :: Auth Flow :: INFO :: Is Logged In ==> True
+2022-10-13 10:43:18 PM :: Kellog Library :: INFO :: Reserving Room 4001 on 2022-10-14 from 01:30:00 PM to 04:30:00 PM for 2 attendee(s)
+2022-10-13 10:43:18 PM :: Kellog Library :: INFO :: Building Reservation Request
+2022-10-13 10:43:19 PM :: Kellog Library :: INFO :: Parsing and Validating Server Response
+2022-10-13 10:43:19 PM :: Kellog Library :: INFO :: Room 4001 Successfully Reserved
+```
 > TODO
 
 ### Vulnerabilites Discovered
