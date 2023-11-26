@@ -58,9 +58,14 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
+      <a href="#obsoletion">Obsoletion</a>
+    </li>
+    <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#basic-log-output">Basic Log Output</a></li>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#vulnerability-disclosure">Vulnerability Disclosure</a></li>
       </ul>
     </li>
     <li>
@@ -75,7 +80,7 @@
     <!--<li><a href="#contributing">Contributing</a></li>-->
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
@@ -249,7 +254,72 @@ ATTENDEES_COUNT = 2
 python3 main.py
 ```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Since the program is designed to be run the day before the desired booking, the execution of `main.py` is intended to exit if run on any other day.
+
+A `cron` job or `launchd` service should be created to run the script the day before the times specified in `TARGET_TIMES`.
+
+Assuming the default `TARGET_TIMES` values, the `launchd` plist file should look like the following template:
+
+> `~/Library/LaunchAgents/com.user.csusm-studyroom-reserver.plist`
+``` plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.user.csusm-studyroom-reserver</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/path/to/your/venv/bin/python3</string>
+      <string>/path/to/your/main.py</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <array>
+      <dict> <!-- 05:30 PM -->
+        <key>Hour</key>
+        <integer>17</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+        <key>Weekday</key>
+        <integer>0</integer> <!-- Sunday -->
+      </dict>
+      <dict> <!-- 01:30 PM -->
+        <key>Hour</key>
+        <integer>13</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+        <key>Weekday</key>
+        <integer>2</integer> <!-- Tuesday -->
+      </dict>
+      <dict>
+        <key>Hour</key>  <!-- 05:30 PM -->
+        <integer>17</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+        <key>Weekday</key>
+        <integer>4</integer> <!-- Thursday -->
+      </dict>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/path/to/your/project/directory</string>
+
+    <key>StandardOutPath</key>
+    <string>/path/to/your/logfile.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/path/to/your/error-logfile.log</string>
+  </dict>
+</plist>
+```
+
+Upon saving the file, load the scheduled job using
+
+``` shell
+launchctl load ~/Library/LaunchAgents/com.user.csusm-studyroom-reserver.plist
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
